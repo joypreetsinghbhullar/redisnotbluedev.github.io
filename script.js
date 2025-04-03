@@ -1,11 +1,15 @@
-const themeToggle = document.getElementById("theme-toggle");
+// Dark Mode Toggle Function
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
 
-themeToggle.addEventListener("click", () => {
-	document.body.classList.toggle("dark-mode");
-	localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+// Toggle dark mode class
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  // Update button text based on theme
+  if (body.classList.contains('dark-mode')) {
+    toggleButton.textContent = 'Switch to Light Mode';
+  } else {
+    toggleButton.textContent = 'Switch to Dark Mode';
+  }
 });
-
-// Load theme from local storage
-if (localStorage.getItem("theme") === "dark") {
-	document.body.classList.add("dark-mode");
-}

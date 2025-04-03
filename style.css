@@ -1,23 +1,23 @@
 /* Default (Light Mode) */
 :root {
-	--bg-color: #f5f5f5;
-	--text-color: #333;
-	--box-color: white;
-	--accent-color: #0077cc;
+	--bg-color: #f5f5f5;   /* Light background */
+	--text-color: #333;     /* Dark text */
+	--box-color: white;     /* White content box */
+	--accent-color: #0077cc; /* Blue accent color */
 }
 
 /* Dark Mode Variables */
 .dark-mode {
-	--bg-color: #181818;
-	--text-color: #ddd;
-	--box-color: #222;
-	--accent-color: #1e90ff;
+	--bg-color: #181818;   /* Dark background */
+	--text-color: #ddd;     /* Light text */
+	--box-color: #222;      /* Dark content box */
+	--accent-color: #1e90ff; /* Lighter blue accent */
 }
 
 /* Apply Theme */
 body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
+	background-color: var(--bg-color);  /* Using CSS variable for background */
+	color: var(--text-color);           /* Using CSS variable for text color */
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
@@ -26,7 +26,7 @@ body {
 
 /* Topbar */
 .topbar {
-	background-color: var(--box-color);
+	background-color: var(--box-color); /* Box color, depending on theme */
 	padding: 15px;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	display: flex;
@@ -37,7 +37,7 @@ body {
 
 /* Dark Mode Button */
 button {
-	background-color: var(--accent-color);
+	background-color: var(--accent-color); /* Accent color for the button */
 	color: white;
 	border: none;
 	padding: 10px;
@@ -55,7 +55,7 @@ button:hover {
 	max-width: 800px;
 	margin: auto;
 	padding: 20px;
-	background-color: var(--box-color);
+	background-color: var(--box-color); /* Box color for content */
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
 	margin-top: 20px;
@@ -63,7 +63,7 @@ button:hover {
 
 /* Headings and Text */
 h2 {
-	color: var(--text-color);
+	color: var(--text-color); /* Text color for headings */
 }
 
 p {
@@ -73,7 +73,7 @@ p {
 
 /* Links */
 a {
-	color: var(--accent-color);
+	color: var(--accent-color); /* Accent color for links */
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -81,4 +81,3 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-

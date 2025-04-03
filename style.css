@@ -1,103 +1,70 @@
-/* Global Styles */
-* {
+/* General reset and layout */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-.topbar {
-  background-color: #222;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-
-.topbar .logo h1 {
-  font-size: 1.8em;
-}
-
-.topbar .right {
-  margin-left: auto; /* Pushes button to the right */
-}
-
-button {
-  background-color: #0077b6;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #61dafb;
 }
 
 .container {
-  max-width: 900px;
-  margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container a {
-  color: #0077b6;
+a {
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: #007bff;
 }
 
-.container a:hover {
-  color: #61dafb;
+a:hover {
+  color: #0056b3;
 }
 
-/* Dark Mode Styles */
+h1, h2 {
+  color: #333;
+}
+
+/* Topbar Styling */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.right {
+  margin-left: auto;  /* Pushes the button to the far right */
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styling */
 body.dark-mode {
   background-color: #121212;
   color: white;
 }
 
 body.dark-mode .topbar {
-  background-color: #1e1e1e;
+  background-color: #333;
 }
 
-body.dark-mode .topbar button {
-  background-color: #444;
+body.dark-mode button {
+  background-color: #007bff;
 }
 
-body.dark-mode .container {
-  background-color: #2c2c2c;
-  color: white;
-}
-
-body.dark-mode .container a {
-  color: #61dafb;
-}
-
-body.dark-mode button:hover {
-  background-color: #61dafb;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .topbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .topbar .right {
-    margin-top: 10px;
-  }
-}

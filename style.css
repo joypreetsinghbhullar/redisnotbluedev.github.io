@@ -1,20 +1,79 @@
-/* NO WAY IS THIS CHATGPT CSS?? */
+/* Default (Light Mode) */
+:root {
+	--bg-color: #f5f5f5;
+	--text-color: #333;
+	--box-color: white;
+	--accent-color: #0077cc;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+	--bg-color: #181818;
+	--text-color: #ddd;
+	--box-color: #222;
+	--accent-color: #1e90ff;
+}
+
+/* Apply Theme */
 body {
-	font-family: Arial, sans-serif;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 	margin: 0;
 	padding: 0;
-	background-color: #f5f5f5;
-	color: #333;
+	font-family: Arial, sans-serif;
 	text-align: center;
 }
 
-h1 {
-	color: #0077cc;
+/* Topbar */
+.topbar {
+	background-color: var(--box-color);
+	padding: 15px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+/* Dark Mode Button */
+button {
+	background-color: var(--accent-color);
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+/* Content Box */
+.container {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	background-color: var(--box-color);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
 	margin-top: 20px;
 }
 
+/* Headings and Text */
+h2 {
+	color: var(--text-color);
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+/* Links */
 a {
-	color: #0077cc;
+	color: var(--accent-color);
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -23,21 +82,3 @@ a:hover {
 	text-decoration: underline;
 }
 
-.container {
-	max-width: 800px;
-	margin: auto;
-	padding: 20px;
-	background-color: white;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-	border-radius: 8px;
-}
-
-h2 {
-	margin-top: 30px;
-	color: #444;
-}
-
-p {
-	font-size: 18px;
-	line-height: 1.6;
-}

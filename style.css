@@ -1,83 +1,103 @@
-/* Default (Light Mode) */
-:root {
-	--bg-color: #f5f5f5;   /* Light background */
-	--text-color: #333;     /* Dark text */
-	--box-color: white;     /* White content box */
-	--accent-color: #0077cc; /* Blue accent color */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Dark Mode Variables */
-.dark-mode {
-	--bg-color: #181818;   /* Dark background */
-	--text-color: #ddd;     /* Light text */
-	--box-color: #222;      /* Dark content box */
-	--accent-color: #1e90ff; /* Lighter blue accent */
-}
-
-/* Apply Theme */
 body {
-	background-color: var(--bg-color);  /* Using CSS variable for background */
-	color: var(--text-color);           /* Using CSS variable for text color */
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-	text-align: center;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Topbar */
 .topbar {
-	background-color: var(--box-color); /* Box color, depending on theme */
-	padding: 15px;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
-/* Dark Mode Button */
+.topbar .logo h1 {
+  font-size: 1.8em;
+}
+
+.topbar .right {
+  margin-left: auto; /* Pushes button to the right */
+}
+
 button {
-	background-color: var(--accent-color); /* Accent color for the button */
-	color: white;
-	border: none;
-	padding: 10px;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-	opacity: 0.8;
+  background-color: #61dafb;
 }
 
-/* Content Box */
 .container {
-	max-width: 800px;
-	margin: auto;
-	padding: 20px;
-	background-color: var(--box-color); /* Box color for content */
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-	border-radius: 8px;
-	margin-top: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings and Text */
-h2 {
-	color: var(--text-color); /* Text color for headings */
+.container a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-p {
-	font-size: 18px;
-	line-height: 1.6;
+.container a:hover {
+  color: #61dafb;
 }
 
-/* Links */
-a {
-	color: var(--accent-color); /* Accent color for links */
-	text-decoration: none;
-	font-weight: bold;
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
-a:hover {
-	text-decoration: underline;
+body.dark-mode .topbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .topbar button {
+  background-color: #444;
+}
+
+body.dark-mode .container {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+body.dark-mode .container a {
+  color: #61dafb;
+}
+
+body.dark-mode button:hover {
+  background-color: #61dafb;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topbar .right {
+    margin-top: 10px;
+  }
 }

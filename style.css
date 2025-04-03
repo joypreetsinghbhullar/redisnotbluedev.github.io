@@ -120,7 +120,7 @@ body.dark-mode button:hover {
 }
 
 body.dark-mode h2, body.dark-mode h3 {
-  color: #bb86fc; /* Light purple for dark mode headings */
+  color: white; /* Light purple for dark mode headings */
 }
 
 /* About Section */

@@ -133,12 +133,12 @@ body.dark-mode h2, body.dark-mode h3 {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #eee;
   color: white;
   margin-top: 40px;
 }
 body.dark-mode footer {
-  background-color: #eee;
+  background-color: #333;
 }
 
 footer a {

@@ -134,11 +134,12 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: #eee;
-  color: white;
+  color: #333;
   margin-top: 40px;
 }
 body.dark-mode footer {
   background-color: #333;
+  color: white;
 }
 
 footer a {

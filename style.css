@@ -137,6 +137,9 @@ footer {
   color: white;
   margin-top: 40px;
 }
+body.dark-mode footer {
+  background-color: #eee
+}
 
 footer a {
   color: #007bff;

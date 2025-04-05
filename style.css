@@ -122,6 +122,7 @@ body.dark-mode {
 
 body.dark-mode .topbar {
   background-color: #333;
+  color: #eee;
 }
 
 body.dark-mode .project {

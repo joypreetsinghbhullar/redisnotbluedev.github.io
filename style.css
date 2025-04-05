@@ -250,17 +250,3 @@ footer p {
     opacity: 1;
   }
 }
-
-/* Button Animation */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-button, .project .button {
-  animation: bounce 1s ease-in-out infinite;
-}

@@ -1,3 +1,18 @@
+/* CSS Variables */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --background-color: #f4f4f4;
+  --dark-background: #121212;
+  --dark-foreground: #2e2e2e;
+  --dark-hover: #444;
+  --text-color: #333;
+  --dark-text: white;
+  --transition: 0.3s;
+  --font-family: 'Roboto', sans-serif;
+  --heading-font-family: 'Poppins', sans-serif;
+}
+
 /* General Reset */
 * {
   margin: 0;
@@ -6,11 +21,11 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family);
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color var(--transition), color var(--transition);
   font-size: 16px;
   padding: 0 20px;
   animation: fadeIn 1s ease-out;
@@ -21,31 +36,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
+  background-color: var(--text-color);
+  color: var(--dark-text);
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 .logo h1 {
   font-size: 2em;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font-family);
 }
 
 .right button {
   padding: 10px 18px;
   font-size: 16px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--dark-text);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition);
 }
 
 .right button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover);
 }
 
 /* Main Content */
@@ -55,14 +70,14 @@ body {
 }
 
 h2 {
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 20px;
   font-size: 2em;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--heading-font-family);
 }
 
 h3 {
-  color: #007bff;
+  color: var(--primary-color);
   font-size: 1.6em;
   font-weight: 600;
   margin-bottom: 20px;
@@ -82,7 +97,7 @@ h3 {
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform var(--transition), box-shadow var(--transition);
   position: relative;
   cursor: pointer;
   animation: slideUp 0.5s ease-out forwards;
@@ -100,49 +115,49 @@ h3 {
 
 .project .button {
   padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--dark-text);
   text-decoration: none;
   border-radius: 5px;
   font-size: 1em;
   font-weight: 500;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color var(--transition), transform var(--transition);
 }
 
 .project .button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover);
   transform: translateY(-3px);
 }
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #121212;
-  color: white;
+  background-color: var(--dark-background);
+  color: var(--dark-text);
 }
 
 body.dark-mode .topbar {
-  background-color: #333;
+  background-color: var(--text-color);
 }
 
 body.dark-mode .project {
-  background-color: #2e2e2e;
-  color: white;
+  background-color: var(--dark-foreground);
+  color: var(--dark-text);
 }
 
 body.dark-mode .project:hover {
-  background-color: #444;
+  background-color: var(--dark-hover);
 }
 
 body.dark-mode button {
-  background-color: #007bff;
+  background-color: var(--primary-color);
 }
 
 body.dark-mode button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover);
 }
 
 body.dark-mode h2, body.dark-mode h3 {
-  color: white;
+  color: var(--dark-text);
 }
 
 /* About Section */
@@ -156,7 +171,7 @@ footer {
   text-align: center;
   padding: 30px;
   background-color: #eee;
-  color: #333;
+  color: var(--text-color);
   margin-top: 40px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -164,18 +179,18 @@ footer {
 }
 
 body.dark-mode footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--text-color);
+  color: var(--dark-text);
 }
 
 footer a {
-  color: #007bff;
+  color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color var(--transition);
 }
 
 footer a:hover {
-  color: #0056b3;
+  color: var(--primary-hover);
   text-decoration: underline;
 }
 
@@ -192,13 +207,13 @@ footer .socials {
 }
 
 footer .socials svg {
-  transition: transform 0.3s, fill 0.3s;
+  transition: transform var(--transition), fill var(--transition);
   cursor: pointer;
 }
 
 footer .socials svg:hover {
   transform: scale(1.3);
-  fill: #007bff;
+  fill: var(--primary-color);
 }
 
 footer p {

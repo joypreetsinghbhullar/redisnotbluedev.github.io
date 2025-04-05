@@ -97,16 +97,15 @@ h3 {
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
   position: relative;
   cursor: pointer;
   animation: slideUp 0.5s ease-out forwards;
 }
 
 .project:hover {
-  transition: translate 1s ease-out;
   transform: translateY(-100px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project p {

@@ -21,6 +21,8 @@ body {
   background-color: #333;
   color: white;
   padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .logo h1 {
@@ -35,11 +37,12 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .right button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 /* Main Content */
@@ -60,6 +63,8 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .project {
@@ -68,6 +73,7 @@ h3 {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideUp 0.5s ease-out forwards;
 }
 
 .project:hover {
@@ -136,7 +142,9 @@ footer {
   background-color: #eee;
   color: #333;
   margin-top: 40px;
+  transition: background-color 0.3s, transform 0.3s;
 }
+
 body.dark-mode footer {
   background-color: #333;
   color: white;
@@ -145,9 +153,67 @@ body.dark-mode footer {
 footer a {
   color: #007bff;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 footer a:hover {
+  color: #0056b3;
   text-decoration: underline;
 }
 
+/* Footer Content */
+.footer-content {
+  animation: fadeInFooter 1.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+footer .socials svg {
+  transition: transform 0.3s, fill 0.3s;
+  cursor: pointer;
+}
+
+footer .socials svg:hover {
+  transform: scale(1.2);
+  fill: #007bff;
+}
+
+footer p {
+  font-size: 0.9em;
+  margin-top: 10px;
+}

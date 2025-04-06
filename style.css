@@ -150,7 +150,7 @@ body.dark-mode .project a.button:hover {
 }
 
 .project:hover {
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 

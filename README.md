@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.8
+  - Windmills were way too fast
+
 ## Logo Jump v2.0.7
   - Rewrote windmill script
 

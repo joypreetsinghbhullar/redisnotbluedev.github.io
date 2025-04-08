@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.10
+  - Fixed a wrongly paired portal
+
 ## Logo Jump v2.0.9
   - Fixed windmill speed again
 

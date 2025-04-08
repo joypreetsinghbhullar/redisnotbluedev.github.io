@@ -1,6 +1,8 @@
 # website
 hello this is a readme
-there's nothing here right now
+
+## Logo Jump v2.0.4
+  - [Fixed a bug where windmills would spin too fast](https://github.com/redisnotbluedev/redisnotbluedev.github.io/issues/2)
 
 ## Logo Jump v2.0.3
   - Removed an impossible jump

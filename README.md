@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.11
+  - Removed the "Quit" button
+
 ## Logo Jump v2.0.10
   - Fixed a wrongly paired portal
 

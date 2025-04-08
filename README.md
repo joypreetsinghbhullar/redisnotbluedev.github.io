@@ -1,6 +1,10 @@
 # website
 hello this is a readme
 
+## Logo Jump v2.0.5
+  - Added alpha support for skins
+  - Made the default skin green instead of black
+
 ## Logo Jump v2.0.4
   - [Fixed a bug where windmills would spin too fast](https://github.com/redisnotbluedev/redisnotbluedev.github.io/issues/2)
 

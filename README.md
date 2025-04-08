@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.7
+  - Rewrote windmill script
+
 ## Logo Jump v2.0.6
   - whoopsie
   - Forgot to disable gravity on the windmills

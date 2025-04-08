@@ -1,6 +1,12 @@
 # website
 hello this is a readme
 
+---
+
+## Logo Jump v2.0.6
+  - whoopsie
+  - Forgot to disable gravity on the windmills
+
 ## Logo Jump v2.0.5
   - Added alpha support for skins
   - Made the default skin green instead of black

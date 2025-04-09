@@ -3,6 +3,10 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.14
+  - Spoofed my UID so I can play on release
+  - Back to release build
+
 ## Logo Jump v2.0.13
   - REALLY fixed the leaderboard this time
   - Moved back to debug build for now

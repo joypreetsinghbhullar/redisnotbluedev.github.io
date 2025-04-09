@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.21
+  - I don't even know anymore
+
 ## Logo Jump v2.0.20
   - Make sure UID is a string
 

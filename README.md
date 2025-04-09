@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.15
+  - Shrunk a large jump
+
 ## Logo Jump v2.0.14
   - Spoofed my UID so I can play on release
   - Back to release build

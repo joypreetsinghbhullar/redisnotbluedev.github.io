@@ -3,6 +3,10 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.17
+  - UID issues
+  - Now each player has a random unique integer as their UID
+
 ## Logo Jump v2.0.16
   - Added a version number on the title screen
   - Added Developer Mode

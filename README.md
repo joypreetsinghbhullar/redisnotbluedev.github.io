@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.19
+  - Check for empty UID and re-apply
+
 ## Logo Jump v2.0.18
   - Refresh UID if it's an old version
 

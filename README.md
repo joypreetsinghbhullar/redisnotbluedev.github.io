@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.22
+  - GODAMMIT WHY IS IT STILL NOT WORKING
+
 ## Logo Jump v2.0.21
   - I don't even know anymore
 

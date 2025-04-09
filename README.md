@@ -3,6 +3,10 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.13
+  - REALLY fixed the leaderboard this time
+  - Moved back to debug build for now
+
 ## Logo Jump v2.0.12
   - Fixed an issue when if you spam reset, you speed up
 

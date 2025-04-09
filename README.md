@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.12
+  - Fixed an issue when if you spam reset, you speed up
+
 ## Logo Jump v2.0.11
   - Removed the "Quit" button
 

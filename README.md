@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.18
+  - Refresh UID if it's an old version
+
 ## Logo Jump v2.0.17
   - UID issues
   - Now each player has a random unique integer as their UID

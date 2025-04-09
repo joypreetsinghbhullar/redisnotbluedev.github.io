@@ -3,6 +3,10 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.0.16
+  - Added a version number on the title screen
+  - Added Developer Mode
+
 ## Logo Jump v2.0.15
   - Shrunk a large jump
 

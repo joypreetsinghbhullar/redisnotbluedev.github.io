@@ -3,7 +3,10 @@ hello this is a readme
 
 ---
 
-## Logo Jumo v2.0.23
+## Logo Jump v2.0.24
+  - Show version number
+
+## Logo Jump v2.0.23
   - Switch to `user://` instead of ProjectSettings
 
 ## Logo Jump v2.0.22

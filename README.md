@@ -3,6 +3,11 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.1.0
+  - Added Practise Mode
+  - There are checkpoints now
+  - Added graphics settings
+
 ## Logo Jump v2.0.24
   - Show version number
 

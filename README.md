@@ -3,8 +3,12 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.1.3
+  - Slow down moving platforms
+  - Make checkpoints visible when in Practise Mode
+
 ## Logo Jump v2.1.2
-  - Made checkpoints hidden when on Practise Mode
+  - Made checkpoints hidden when not on Practise Mode
   - Sped up moving platforms
 
 ## Logo Jump v2.1.1

@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.1.1
+  - Made V-Sync on by default
+
 ## Logo Jump v2.1.0
   - Added Practise Mode
   - There are checkpoints now

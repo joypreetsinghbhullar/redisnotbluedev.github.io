@@ -3,6 +3,10 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.1.2
+  - Made checkpoints hidden when on Practise Mode
+  - Sped up moving platforms
+
 ## Logo Jump v2.1.1
   - Made V-Sync on by default
 
@@ -10,6 +14,7 @@ hello this is a readme
   - Added Practise Mode
   - There are checkpoints now
   - Added graphics settings
+  - Moving platforms now move linearly instead of ease-out
 
 ## Logo Jump v2.0.24
   - Show version number

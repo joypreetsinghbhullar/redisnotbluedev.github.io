@@ -3,6 +3,10 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.1.4
+  - Added Credits
+  - Added Fullscreen toggle
+
 ## Logo Jump v2.1.3
   - Slow down moving platforms
   - Make checkpoints visible when in Practise Mode

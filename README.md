@@ -3,6 +3,12 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.2.0
+  - Added Patch Notes
+  - Added Music
+  - Fixed Rainbow trail
+  - Unified config
+
 ## Logo Jump v2.1.4
   - Added Credits
   - Added Fullscreen toggle

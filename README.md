@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.2.2
+  - Fixed a bug with Patch Notes
+
 ## Logo Jump v2.2.1
   - Added a seperate track for Practise Mode
   - Added more beta testers

@@ -3,6 +3,12 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.3.0
+  - Fixed a bug with Patch Notes
+  - Encrypted leaderboard to protect against hackers
+  - Swap soundtracks for the main menu and Practise Mode
+  - Encrypt files
+
 ## Logo Jump v2.2.2
   - Fixed a bug with Patch Notes
 

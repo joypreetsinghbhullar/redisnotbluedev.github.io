@@ -3,6 +3,9 @@ hello this is a readme
 
 ---
 
+## Logo Jump v2.3.1
+  - Fixed a bug with Patch Notes
+
 ## Logo Jump v2.3.0
   - Fixed a bug with Patch Notes
   - Encrypted leaderboard to protect against hackers

@@ -219,3 +219,9 @@ footer p {
   font-size: 14px;
   margin: 0;
 }
+
+a.unstyled {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}

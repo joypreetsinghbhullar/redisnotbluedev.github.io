@@ -124,7 +124,7 @@ body.dark-mode .project {
   font-size: 14px;
 }
 
-.project a.button {
+a.button {
   background-color: white;
   color: #3498db;
   padding: 10px 15px;
@@ -134,17 +134,17 @@ body.dark-mode .project {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode .project a.button {
+body.dark-mode a.button {
   background-color: #444;
   color: #4aa3ff; /* Brighter blue for buttons in dark mode */
 }
 
-.project a.button:hover {
+a.button:hover {
   background-color: #f4f4f4;
   color: #333;
 }
 
-body.dark-mode .project a.button:hover {
+body.dark-mode a.button:hover {
   background-color: #555;
   color: #4aa3ff;
 }

@@ -26,3 +26,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+function changelog() {
+	const modal = document.getElementById('changelog-modal');
+	modal.style.display = 'flex';
+}
+
+function closeChangelog() {
+	const modal = document.getElementById('changelog-modal');
+	modal.style.display = 'none';
+}

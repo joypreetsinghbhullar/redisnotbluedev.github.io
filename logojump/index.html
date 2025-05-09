@@ -42,6 +42,16 @@
       <p>HI SORRY PLS DONT DOWNLOAD THIS ITS LIKE 500 VERSIONS BEHIND</p>
   	  <a href="https://github.com/redisnotbluedev/logo-jump/releases/latest" class="button">Download for all platforms</a>
     </div>
+    <div class="project">
+      <h2>Chrome Extension</h2>
+      <p>The official game, now in your toolbar!</p>
+      <a href="#" class="button">Coming Soon</a>
+    </div>
+    <div class="project">
+      <h2>Changelog</h2>
+      <p>Take a look at the changes in the game.</p>
+      <a onclick="changelog()" class="button">View</a>
+    </div>
   </div>
   
   <div class="container features">
@@ -53,6 +63,21 @@
   	</ul>
   </div>
 
+  <!-- Changelog Modal -->
+  <div id="changelog-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeChangelog()">&times;</span>
+      <h2>Changelog</h2>
+      <p>Here's what's new in Logo Jump!</p>
+      <ul>
+        <li>🌀 Web version back online</li>
+        <li>💥 Bug fixes for physics glitches</li>
+        <li>🌌 Started working on Endless Mode</li>
+        <!-- Add your actual changelog items here -->
+      </ul>
+    </div>
+  </div>
+  
   <footer>
     <div class="footer-content">
       <div class="socials">

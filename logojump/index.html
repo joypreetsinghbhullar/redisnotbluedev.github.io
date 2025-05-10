@@ -45,7 +45,7 @@
     <div class="project">
       <h2>Chrome Extension</h2>
       <p>The official game, now in your toolbar!</p>
-      <a href="#" class="button">Coming Soon</a>
+      <a onclick="extension()" class="button" style="cursor: pointer;">Coming Soon</a>
     </div>
     <div class="project">
       <h2>Changelog</h2>
@@ -67,6 +67,16 @@
   <div id="changelog-modal" class="modal">
     <div class="modal-content">
       <span class="close-button" onclick="closeChangelog()">&times;</span>
+      <h2>Chrome Extension</h2>
+      <p>Unfortunately, creating a Chrome Extension costs money.</p>
+      <p>However, there is a workaround, but the extension is currently in progress.</p>
+      <p>Check back here for more details soon!</p>
+    </div>
+  </div>
+
+  <div id="extension-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeExtension()">&times;</span>
       <h2>Changelog</h2>
       <p>Here's what's new in Logo Jump!</p>
       <ul>

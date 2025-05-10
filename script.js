@@ -36,3 +36,13 @@ function closeChangelog() {
 	const modal = document.getElementById('changelog-modal');
 	modal.style.display = 'none';
 }
+
+function extension() {
+	const modal = document.getElementById('extension-modal');
+	modal.style.display = 'flex';
+}
+
+function closeExtension() {
+	const modal = document.getElementById('extension-modal');
+	modal.style.display = 'none';
+}

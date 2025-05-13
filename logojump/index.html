@@ -15,8 +15,10 @@
       <h1><a href="https://redisnotbluedev.github.io" class="unstyled">Website</a></h1>
     </div>
     <div class="right">
-      <a href="https://discord.gg/Jf9nVGzTPW" class="button">Join our Discord</a>
-      <button id="theme-toggle">Toggle Dark Mode</button>
+      <a href="https://discord.gg/Jf9nVGzTPW" class="button" style="display: inline-block; height: 20px; padding-inline: 10px;">
+        <img src="../discord.svg" width="30px"></img>
+      </a>
+      <button id="theme-toggle" class="button"><a>Toggle Dark Mode</a></button>
     </div>
   </div>
 
@@ -32,7 +34,7 @@
   </div>
   
   <br>
-  <div class="container projects"> <!-- Why make a new CSS class when we can just use this? -->	
+  <div class="container projects"> <!-- Why make a new CSS class when we can just use this? true-->	
     <div class="project">
       <h2>Web Demo</h2>
       <p>A quick, playable version that lacks some features.</p>
@@ -84,7 +86,7 @@
       <p>Unfortunately, creating a Chrome Extension costs money.</p>
       <p>However, there is a workaround:</p>
       <ol>
-        <li>Go to <code>chrome://extensions</code> in a new tab.</li>
+        <li>Go to <code href="chrome://extensions">chrome://extensions</code> in a new tab.</li>
         <li>Turn on Developer Mode by pressing the switch at the top right.</li>
         <li>Drag the downloaded CRX into the tab with your extensions.</li>
         <li>Open the extension and play!</li>

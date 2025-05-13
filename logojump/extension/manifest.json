@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Logo Jump",
+    "version": "1.0",
+    "description": "Logo Jump but ported to an extension!!!",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_popup_width": 1024,
+        "default_popup_height": 720
+    },
+    "icons": {
+        "16": "index.icon.png",
+        "48": "index.apple-touch-icon.png",
+        "128": "index.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none';"
+    }
+}

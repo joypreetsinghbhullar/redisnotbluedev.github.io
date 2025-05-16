@@ -1,0 +1,50 @@
+name: Copy Demo to Extension
+
+on:
+  push:
+    paths:
+      - 'logojump/demo/**'
+
+jobs:
+  copy-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Copy all demo files except index.html
+        run: |
+          mkdir -p logojump/extension/
+          rsync -av --exclude='index.html' logojump/demo/ logojump/extension/
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add logojump/extension/
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync demo files to extension"
+            git push
+          else
+            echo "No changes to commit"
+          
+      - name: Recreate PEM file from secret
+        run: |
+          echo "$PEM" > logojump/extension.pem
+        env:
+          PEM: ${{ secrets.EXTENSION_PEM }}
+
+      - name: Install Chromium
+        run: |
+          sudo apt update
+          sudo apt install -y chromium-browser
+
+      - name: Pack Chrome Extension
+        run: |
+          chromium-browser \
+            --no-sandbox \
+            --headless \
+            --disable-gpu \
+            --pack-extension=logojump/extension \
+            --pack-extension-key=logojump/extension.pem
+          rm -f logojump/extension.pem

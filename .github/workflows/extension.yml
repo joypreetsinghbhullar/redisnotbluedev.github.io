@@ -28,3 +28,23 @@ jobs:
           else
             echo "No changes to commit"
           
+      - name: Recreate PEM file from secret
+        run: |
+          echo "$PEM" > logojump/extension.pem
+        env:
+          PEM: ${{ secrets.EXTENSION_PEM }}
+
+      - name: Install Chromium
+        run: |
+          sudo apt update
+          sudo apt install -y chromium-browser
+
+      - name: Pack Chrome Extension
+        run: |
+          chromium-browser \
+            --no-sandbox \
+            --headless \
+            --disable-gpu \
+            --pack-extension=logojump/extension \
+            --pack-extension-key=logojump/extension.pem
+          rm -f logojump/extension.pem

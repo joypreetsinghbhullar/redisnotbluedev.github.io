@@ -246,10 +246,13 @@ a.unstyled {
 	padding: 2rem;
 	border-radius: 12px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.4);
-	max-width: 500px;
+	max-width: 50%;
 	width: 90%;
 	position: relative;
 	animation: slideUp 0.3s ease;
+	height: 90%;
+	max-height: 80%;
+	overflow-y: auto;
 }
 
 .close-button {

@@ -27,6 +27,8 @@ jobs:
             git push
           else
             echo "No changes to commit"
+          fi
+
           
       - name: Recreate PEM file from secret
         run: |

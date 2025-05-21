@@ -20,19 +20,6 @@ jobs:
           mkdir -p logojump/extension/
           rsync -av --exclude='index.html' logojump/demo/ logojump/extension/
 
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add logojump/extension/
-          if ! git diff --cached --quiet; then
-            git commit -m "Sync demo files to extension [skip ci]"
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
-          else
-            echo "No changes to commit"
-          fi
 
 
           
@@ -49,4 +36,19 @@ jobs:
       - name: Build extension with crx
         run: |
           crx pack logojump/extension -o logojump/extension.crx -p logojump/extension.pem
-
+      - name: Remove file
+        run: |
+          rm logojump/extension.pem
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add logojump/extension/
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync demo files to extension and build [skip ci]"
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit"
+          fi

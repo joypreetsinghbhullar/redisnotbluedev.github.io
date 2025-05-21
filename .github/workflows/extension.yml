@@ -48,4 +48,3 @@ jobs:
           git add logojump/extension/
           git commit -m "Sync demo files to extension and build [skip ci]"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
-          fi

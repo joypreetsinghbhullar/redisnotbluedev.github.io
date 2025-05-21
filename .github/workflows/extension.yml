@@ -42,8 +42,11 @@ jobs:
         env:
           PEM: ${{ secrets.EXTENSION_PEM }}
 
-      - name: Pack Chrome Extension
+      - name: Install crx
         run: |
           npm install -g crx
+
+      - name: Build extension with crx
+        run: |
           crx pack logojump/extension -o logojump/extension.crx -p logojump/extension.pem
 

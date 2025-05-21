@@ -6,6 +6,7 @@
     "permissions": [
         "storage"
     ],
+    "update_url": "https://redisnotbluedev.github.io/logojump/extension-updates.xml",
     "action": {
         "default_popup": "index.html",
         "default_popup_width": 1024,

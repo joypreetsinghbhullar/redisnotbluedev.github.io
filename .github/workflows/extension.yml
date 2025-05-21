@@ -42,20 +42,8 @@ jobs:
         env:
           PEM: ${{ secrets.EXTENSION_PEM }}
 
-      - name: Install Google Chrome
-        run: |
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
-          sudo apt update
-          sudo apt install -y google-chrome-stable
-
       - name: Pack Chrome Extension
         run: |
-          google-chrome \
-            --no-sandbox \
-            --headless \
-            --disable-gpu \
-            --pack-extension=logojump/extension \
-            --pack-extension-key=logojump/extension.pem
-          rm -f logojump/extension.pem
+          npm install -g crx
+          crx pack logojump/extension -o logojump/extension.crx -p logojump/extension.pem
 

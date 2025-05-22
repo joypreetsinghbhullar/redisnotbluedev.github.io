@@ -18,9 +18,9 @@ jobs:
       - name: Copy all demo files except index.html
         run: |
           mkdir -p logojump/extension/
-          rsync -av --exclude='index.html' logojump/demo/ logojump/extension/
-
-
+          #rsync -av --exclude='index.html' logojump/demo/ logojump/extension/
+          cp logojump/demo/index.pck logojump/demo/index.pck
+          cp logojump/demo/index.wasm logojump/demo/index.wasm
 
           
       - name: Recreate PEM file from secret

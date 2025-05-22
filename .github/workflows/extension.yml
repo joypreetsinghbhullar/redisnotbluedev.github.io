@@ -19,8 +19,8 @@ jobs:
         run: |
           mkdir -p logojump/extension/
           #rsync -av --exclude='index.html' logojump/demo/ logojump/extension/
-          cp logojump/demo/index.pck logojump/demo/index.pck
-          cp logojump/demo/index.wasm logojump/demo/index.wasm
+          cp logojump/demo/index.pck logojump/extension/index.pck
+          cp logojump/demo/index.wasm logojump/extension/index.wasm
 
           
       - name: Recreate PEM file from secret

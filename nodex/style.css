@@ -1,0 +1,184 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #007bff;
+    margin: 0;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 80%;
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.chat-history {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message.user {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.message.ai {
+    background-color: #333;
+    color: #e0e0e0;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 4px 8px rgba(51, 51, 51, 0.3);
+}
+
+.input-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    gap: 10px;
+}
+
+input#prompt {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input#prompt:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+input#prompt::placeholder {
+    color: #888;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Styling for blockquotes */
+blockquote {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border-left: 5px solid #007bff;
+    font-style: italic;
+    color: #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for inline code */
+code {
+    display: inline;
+    background-color: #4f4f4f;
+    color: #e0e0e0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Fira Code', monospace;
+    font-size: 90%;
+}
+
+/* Styling for multiline code blocks */
+#multiline {
+    display: block;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Styling for links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

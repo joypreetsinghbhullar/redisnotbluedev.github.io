@@ -19,21 +19,8 @@ jobs:
         run: |
           mkdir -p logojump/extension/
           rsync -av --exclude='index.html' logojump/demo/ logojump/extension/
-
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add logojump/extension/
-          if ! git diff --cached --quiet; then
-            git commit -m "Sync demo files to extension [skip ci]"
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
-          else
-            echo "No changes to commit"
-          fi
-
+          cp logojump/demo/index.pck logojump/extension/index.pck -f
+          cp logojump/demo/index.wasm logojump/extension/index.wasm -f
 
           
       - name: Recreate PEM file from secret
@@ -42,20 +29,22 @@ jobs:
         env:
           PEM: ${{ secrets.EXTENSION_PEM }}
 
-      - name: Install Google Chrome
+      - name: Install crx
         run: |
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
-          sudo apt update
-          sudo apt install -y google-chrome-stable
+          npm install -g crx
 
-      - name: Pack Chrome Extension
+      - name: Build extension with crx
         run: |
-          google-chrome \
-            --no-sandbox \
-            --headless \
-            --disable-gpu \
-            --pack-extension=logojump/extension \
-            --pack-extension-key=logojump/extension.pem
-          rm -f logojump/extension.pem
-
+          crx pack logojump/extension -o logojump/extension.crx -p logojump/extension.pem
+      - name: Remove file
+        run: |
+          rm logojump/extension.pem
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add logojump/extension/
+          git commit -m "Sync demo files to extension and build [skip ci]" -a
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
